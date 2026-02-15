@@ -2,7 +2,7 @@
 
 This project began as a customer segmentation exercise.
 
-While exploring the data, the bigger issue became clear — different teams would interpret the same customer data differently. Marketing, support, and product could all reach different conclusions from the same dataset.
+While exploring the data, the bigger issue became clear - different teams would interpret the same customer data differently. Marketing, support, and product could all reach different conclusions from the same dataset.
 
 So the goal shifted from creating segments to creating a shared understanding of customer behaviour.
 
