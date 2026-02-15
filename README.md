@@ -1,4 +1,4 @@
-# 🧠 Customer Behaviour Explorer
+# Customer Behaviour Explorer
 ### Turning raw transactions into something a team can actually use
 
 🔗 Try the live explorer: https://public.tableau.com/views/CustomerBehaviourExplorer-NitinC/Dashboard1  
