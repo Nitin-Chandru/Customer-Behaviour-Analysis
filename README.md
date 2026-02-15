@@ -8,9 +8,7 @@ An interactive tool to identify valuable, inactive, and loyal customers in secon
 
 ## Why this project exists
 
-Many data projects try to answer:
-
-> *Who are our best customers?*
+Many data projects try to answer who our best customers are.
 
 But that only works if behaviour is measured clearly.
 
@@ -85,10 +83,6 @@ Rather than a one-time analysis, it acts as a lightweight internal tool.
 Most analytics projects explain the past.
 
 This project focuses on enabling decisions.
-
-Key idea:
-
-> Reliable actions require understandable behaviour before advanced modelling.
 
 ---
 
