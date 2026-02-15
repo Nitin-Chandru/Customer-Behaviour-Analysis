@@ -1,126 +1,118 @@
-Customer Behaviour Case Study — From Raw Data to a Decision Tool
+# 🧠 Customer Behaviour Case Study
+### Turning raw transactional data into a usable decision tool
 
 A product-thinking case study based on the KPMG Data Analytics simulation.
 
-This project is not about building the most complex model.
-It is about answering a simpler and more important question:
+---
 
-If a team had this data, what could they safely do with it?
+## The Core Question
 
-Why this project exists
+Most data projects try to answer:
 
-The dataset represents a retail company that wants to identify high-value customers for marketing campaigns.
+> *Who are our best customers?*
 
-At first, this looks like a segmentation task.
+This project instead asks:
 
-But before deciding who to target, a more basic concern appears:
+> **Can we even reliably recognise a customer before trying to target them?**
 
-Can the business consistently recognise the same customer over time?
+Because if customer measurement is inconsistent, any targeting system — no matter how advanced — becomes unreliable.
 
-If the answer is uncertain, any targeting system — no matter how advanced — becomes unreliable.
+---
 
-So instead of jumping to prediction, this project focuses on something more fundamental:
+## Context
 
-Turning raw data into something a team can actually trust and use.
+The dataset represents a retail business trying to identify high-value customers for marketing campaigns.
 
-What I did
-1) Checked whether the data is usable
+At first glance, this looks like a segmentation or modelling task.
 
-Rather than immediately analysing trends, I first treated the dataset like a real product telemetry source.
+But before deciding *who to target*, a more fundamental issue appears:
 
-I looked for issues that would break a real system:
+- inconsistent demographic values  
+- missing attributes  
+- duplicate transactions  
+- fragmented records  
 
-unrealistic ages and invalid birth dates
+So the real problem becomes:
 
-inconsistent category labels
+> **Not a marketing problem — a measurement problem**
 
-incomplete records
+---
 
-duplicate or fragmented transactions
+## Approach
 
-missing customer attributes
+### 1. Validate the data before analysing it
+Instead of immediately searching for trends, I treated the dataset like production telemetry.
 
-The goal here was simple:
-before building intelligence, verify measurement.
+Goal: determine whether decisions made from this data would be trustworthy.
 
-2) Created a reliable behavioural view (RFM segmentation)
+---
 
-Instead of predictive modelling, I used a transparent segmentation method:
+### 2. Use interpretable segmentation (RFM)
 
-Metric	What it tells us
-Recency	Who came back recently
-Frequency	Who returns often
-Monetary	Who contributes meaningful value
+Rather than predictive modelling, I applied a transparent behavioural framework:
 
-This produces understandable behavioural groups rather than abstract scores.
+| Metric | Meaning |
+|------|------|
+| Recency | How recently a customer purchased |
+| Frequency | How often they purchase |
+| Monetary | Value contributed |
 
-The intention was not to be fancy — it was to be dependable.
+This produces understandable customer groups instead of opaque scores.
 
-3) Built a usable internal tool (Power BI dashboard)
+The objective was reliability, not sophistication.
 
-Rather than presenting static results, I built an interactive dashboard that acts like a lightweight product.
+---
 
-The dashboard allows someone in marketing or operations to explore:
+### 3. Build a usable internal tool
 
-repeat customers
+Instead of static results, I created an interactive Power BI dashboard that acts as a lightweight product.
 
-recent activity
+The dashboard allows teams to explore:
 
-spending contribution
+- repeat customers
+- recent engagement
+- spending contribution
+- behavioural differences between groups
 
-differences between customer groups
+The `.pbix` file in this repository represents a **prototype customer intelligence interface**, not just a chart export.
 
-The Power BI file in this repo is meant to be used, not just viewed.
+---
 
-It represents the first usable version of a “customer intelligence system”.
+## What this shows
 
-What this project shows
+Many analytics exercises end at insight.
 
-Many data projects answer:
+This project focuses on **decision readiness**.
 
-What happened?
+Key learning:
 
-This project tries to answer:
+> Targeting systems usually fail because inputs are unreliable, not because models are weak.
 
-What can a team confidently act on?
+Before automation, a team needs behavioural clarity.
 
-The main learning:
+---
 
-Targeting systems fail less often because of bad models and more often because of unreliable inputs.
+## If this became a real product
 
-Before automation, a business needs behavioural clarity.
+**Step 1 — Measurement**
+Standardise and validate customer data collection
 
-If this were developed further
+**Step 2 — Understanding**
+Provide a live behavioural dashboard *(current prototype)*
 
-A realistic product direction would be:
+**Step 3 — Action**
+Introduce targeting and automation only after trust exists
 
-Step 1 — Measurement
-Make customer data consistent at entry
+---
 
-Step 2 — Understanding
-Give teams a live behavioural dashboard
+## How to explore
 
-Step 3 — Action
-Only then introduce targeting and automation
+1. Review the prepared dataset / analysis
+2. Open the Power BI file
+3. Interact with filters and segments
+4. Observe how simple behavioural grouping already enables decisions
 
-The dashboard in this repo represents step 2.
+---
 
-How to explore the project
+## Repository Structure
 
-Review the cleaned dataset / notebooks to understand preparation
-
-Open the Power BI file
-
-Interact with filters to see how customer groups change
-
-Observe how simple segmentation already enables decisions
-
-Repository contents
-
-dataset — simulated retail customer & transaction data
-
-analysis — preparation and segmentation logic
-
-dashboard.pbix — interactive behavioural dashboard
-
-README — case study explanation
