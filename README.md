@@ -1,118 +1,122 @@
-# 🧠 Customer Behaviour Case Study
-### Turning raw transactional data into a usable decision tool
+# 🧠 Customer Behaviour Explorer
+### Turning raw transactions into something a team can actually use
 
-A product-thinking case study based on the KPMG Data Analytics simulation.
+🔗 Try the live explorer: https://public.tableau.com/views/CustomerBehaviourExplorer-NitinC/Dashboard1  
+An interactive tool to identify valuable, inactive, and loyal customers in seconds.
 
 ---
 
-## The Core Question
+## Why this project exists
 
-Most data projects try to answer:
+Many data projects try to answer:
 
 > *Who are our best customers?*
 
-This project instead asks:
+But that only works if behaviour is measured clearly.
 
-> **Can we even reliably recognise a customer before trying to target them?**
+Before targeting users, a team first needs to understand:
 
-Because if customer measurement is inconsistent, any targeting system — no matter how advanced — becomes unreliable.
+**How does each customer actually behave?**
+
+If that is unclear, any marketing or automation built on top becomes unreliable.
+
+This project focuses on making behaviour understandable before making predictions.
 
 ---
 
-## Context
+## The dataset problem
 
-The dataset represents a retail business trying to identify high-value customers for marketing campaigns.
+Retail transaction data records purchases, not behaviour.
 
-At first glance, this looks like a segmentation or modelling task.
+Each customer appears across multiple rows, making it difficult to directly answer questions like:
 
-But before deciding *who to target*, a more fundamental issue appears:
+- Who is loyal?
+- Who is valuable but inactive?
+- Who buys frequently but spends little?
 
-- inconsistent demographic values  
-- missing attributes  
-- duplicate transactions  
-- fragmented records  
-
-So the real problem becomes:
-
-> **Not a marketing problem — a measurement problem**
+So the goal was to transform raw transactions into stable behavioural signals.
 
 ---
 
 ## Approach
 
-### 1. Validate the data before analysing it
-Instead of immediately searching for trends, I treated the dataset like production telemetry.
+### 1. Convert transactions into behaviour
 
-Goal: determine whether decisions made from this data would be trustworthy.
+Three interpretable metrics were created:
 
----
+| Behaviour | Meaning |
+|--------|------|
+| Frequency | How often a customer purchases |
+| Value | Total contribution generated |
+| Recency | How recently they were active |
 
-### 2. Use interpretable segmentation (RFM)
-
-Rather than predictive modelling, I applied a transparent behavioural framework:
-
-| Metric | Meaning |
-|------|------|
-| Recency | How recently a customer purchased |
-| Frequency | How often they purchase |
-| Monetary | Value contributed |
-
-This produces understandable customer groups instead of opaque scores.
-
-The objective was reliability, not sophistication.
+This creates a dependable representation of engagement.
 
 ---
 
-### 3. Build a usable internal tool
+### 2. Create understandable segments
 
-Instead of static results, I created an interactive Power BI dashboard that acts as a lightweight product.
+Instead of predictive scoring, customers are grouped into intuitive categories:
 
-The dashboard allows teams to explore:
+- Loyal & high value
+- Frequent buyers
+- Big spenders
+- Low engagement
 
-- repeat customers
-- recent engagement
-- spending contribution
-- behavioural differences between groups
-
-The `.pbix` file in this repository represents a **prototype customer intelligence interface**, not just a chart export.
+The goal is immediate human understanding, not statistical complexity.
 
 ---
 
-## What this shows
+### 3. Build a decision interface
 
-Many analytics exercises end at insight.
+The Tableau dashboard allows anyone to:
 
-This project focuses on **decision readiness**.
+- spot valuable customers instantly
+- find inactive high-value users
+- compare behaviour patterns
+- explore retention opportunities
 
-Key learning:
-
-> Targeting systems usually fail because inputs are unreliable, not because models are weak.
-
-Before automation, a team needs behavioural clarity.
+Rather than a one-time analysis, it acts as a lightweight internal tool.
 
 ---
 
-## If this became a real product
+## What this demonstrates
 
-**Step 1 — Measurement**
-Standardise and validate customer data collection
+Most analytics projects explain the past.
 
-**Step 2 — Understanding**
-Provide a live behavioural dashboard *(current prototype)*
+This project focuses on enabling decisions.
 
-**Step 3 — Action**
-Introduce targeting and automation only after trust exists
+Key idea:
+
+> Reliable actions require understandable behaviour before advanced modelling.
+
+---
+
+## If this evolved into a real product
+
+1. **Measurement** — standardise behaviour tracking  
+2. **Understanding** — provide live behavioural exploration *(current stage)*  
+3. **Action** — introduce targeting and automation
 
 ---
 
 ## How to explore
 
-1. Review the prepared dataset / analysis
-2. Open the Power BI file
-3. Interact with filters and segments
-4. Observe how simple behavioural grouping already enables decisions
+Open the dashboard and try answering:
+
+- Which valuable customers stopped purchasing recently?
+- Who buys frequently but contributes little value?
+- Which users should retention focus on?
+
+Hover over customers and use filters to explore behaviour.
 
 ---
 
-## Repository Structure
+## Repository contents
 
+- dataset — transaction and customer data
+- calculations — behavioural metric definitions
+- dashboard — interactive behaviour explorer
+- README — product case study explanation
+
+---
